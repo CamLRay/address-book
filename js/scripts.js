@@ -10,8 +10,11 @@ $(document).ready(function() {
     const dob = $("#birthday").val();
     const favoriteColor =$("#color").val();
 
-  $("#contacts").append("<h3>"+name+"</h3>"+"<p>Phone: "+phone+"</p>"+'<div class="hidden">'+"<p>Address: "+address+"</p>"+"<p>Email: "+email+"</p>"+"<p>Relationship :"+relationship+"</p>"+"<p>Vaccine Status:"+status+"</p>"+"<p>Birthdate: "+dob+"</p>"+"<p>Favorite color Hex code: "+favoriteColor+"</p>"+"</div>")
+  $("#contacts").append("<h3>"+name+"</h3>"+"<p>Phone: "+phone+"</p>"+"<p class=showmore>Show More</p>"+'<div class="hidden" class="showmore">'+"<p>Address: "+address+"</p>"+"<p>Email: "+email+"</p>"+"<p>Relationship :"+relationship+"</p>"+"<p>Vaccine Status:"+status+"</p>"+"<p>Birthdate: "+dob+"</p>"+"<p>Favorite color Hex code: "+favoriteColor+"</p>"+"</div>")
   });
 
+  $(".showmore").click(function() {
+    $(this).toggle();
+  });
 
 })
